@@ -14,6 +14,8 @@ struct ContentView: View {
     @State private var showingScore = false
     @State private var scoreTitle = ""
     @State private var score = 0
+    @State private var levelTracker = 0
+    @State private var isEndGame = false
     
     var body: some View {
         VStack(spacing: 30) {
@@ -30,10 +32,16 @@ struct ContentView: View {
                 Image(countries[number])
                     .border(.black)
             }
-        }.alert(scoreTitle, isPresented: $showingScore) {
+        }
+        .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
-            Text("your score is \(score)")
+            Text("your score is \(score) level: \(levelTracker)")
+        }
+        .alert("Game over!", isPresented: $isEndGame) {
+            Button("Reset game", action: resetGame)
+        } message: {
+            Text("Thank you for playing! your score is: \(score)")
         }
     }
     
@@ -50,6 +58,17 @@ struct ContentView: View {
             }
         }
         showingScore = true
+        levelTracker = levelTracker + 1
+        
+        if levelTracker >= 8 {
+            showingScore = false
+            isEndGame = true
+        }
+    }
+    
+    func resetGame() {
+        levelTracker = 0
+        isEndGame = false
     }
     
     func askQuestion() {
