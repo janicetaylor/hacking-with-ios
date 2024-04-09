@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+struct ErrorViewModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundStyle(.red)
+    }
+}
+
 struct ContentView: View {
     
     @State private var checkAmount = 0.0
@@ -24,7 +31,6 @@ struct ContentView: View {
         return amountPerPerson
     }
     var originalAmount: Double {
-        let peopleCount = Double(numberOfPeople + 2)
         let tipSelection = Double(tipPercentage)
         let tipValue = checkAmount / 100 * tipSelection
         let total = checkAmount + tipValue
@@ -62,8 +68,13 @@ struct ContentView: View {
                 }
                 
                 Section("Total amount") {
-                    Text(originalAmount, format: .currency(code: Locale
-                        .current.currency?.identifier ?? "USD"))
+                    if tipPercentage == 0 {
+                        Text(originalAmount, format: .currency(code: Locale
+                            .current.currency?.identifier ?? "USD")).modifier(ErrorViewModifier())
+                    } else {
+                        Text(originalAmount, format: .currency(code: Locale
+                            .current.currency?.identifier ?? "USD"))
+                    }
                 }
             }
         }
