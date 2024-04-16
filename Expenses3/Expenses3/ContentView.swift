@@ -78,7 +78,6 @@ struct ContentView: View {
     
     func removeItems(at offsets: IndexSet, in inputArray: [ExpenseItem]) {
         var objectsToDelete = IndexSet()
-        
         for offset in offsets {
             let item = inputArray[offset]
             
@@ -86,8 +85,6 @@ struct ContentView: View {
                 objectsToDelete.insert(index)
             }
         }
-        
-        
         expenses.items.remove(atOffsets: objectsToDelete)
     }
     
