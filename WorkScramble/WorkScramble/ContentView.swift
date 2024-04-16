@@ -54,6 +54,16 @@ struct ContentView: View {
         guard answer.count > 0 else { return }
         
         // extra validation
+        guard isDefaultWord(word: answer) else {
+            wordError(title: "Word is default word", message: "Enter in a new word")
+            return
+        }
+        
+        guard isWordCountOverMinimum(word: answer) else {
+            wordError(title: "Word is too short", message: "Enter in words over 3 characters")
+            return 
+        }
+        
         guard isOriginal(word: answer) else {
             wordError(title: "Word already used", message: "Be more original!")
             return
@@ -75,8 +85,22 @@ struct ContentView: View {
         newWord = ""
     }
     
+    func isDefaultWord(word: String) -> Bool {
+        if (word == "silkworm") {
+            return false
+        }
+        return true
+    }
+    
+    func isWordCountOverMinimum(word: String) -> Bool {
+        if word.count <= 3 {
+            return false
+        }
+        return true
+    }
+    
     func isOriginal(word: String) -> Bool {
-        !usedWords.contains(word)
+        return !usedWords.contains(word)
     }
     
     func isPossible(word: String) -> Bool {
