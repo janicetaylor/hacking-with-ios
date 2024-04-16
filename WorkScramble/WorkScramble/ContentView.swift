@@ -36,6 +36,11 @@ struct ContentView: View {
                 
             }
             .navigationTitle(rootWord)
+            .toolbar {
+                Button("start game") {
+                    startGame()
+                }
+            }
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
             .alert(errorTitle, isPresented: $showingError) {
@@ -61,7 +66,7 @@ struct ContentView: View {
         
         guard isWordCountOverMinimum(word: answer) else {
             wordError(title: "Word is too short", message: "Enter in words over 3 characters")
-            return 
+            return
         }
         
         guard isOriginal(word: answer) else {
