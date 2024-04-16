@@ -17,6 +17,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationStack {
             List {
@@ -39,7 +41,9 @@ struct ContentView: View {
             .toolbar {
                 Button("start game") {
                     startGame()
+                    resetScore()
                 }
+                Text("score: \(score)")
             }
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
@@ -49,6 +53,14 @@ struct ContentView: View {
                 Text(errorMessage)
             }
         }
+    }
+    
+    func resetScore() {
+        score = 0
+    }
+    
+    func calculateScore(word: String) {
+        score = score + word.count
     }
     
     func addNewWord() {
@@ -86,6 +98,7 @@ struct ContentView: View {
         
         withAnimation {
             usedWords.insert(answer, at: 0)
+            calculateScore(word: answer)
         }
         newWord = ""
     }
@@ -135,6 +148,8 @@ struct ContentView: View {
     }
     
     func startGame() {
+        usedWords = [String]()
+        
         // 1 - find the url for start.txt
         if let startWordURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             // 2 - load start.txt into a string
