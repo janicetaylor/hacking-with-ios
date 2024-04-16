@@ -13,6 +13,7 @@
 		1170366C2BCF1F27004FB53E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1170366B2BCF1F27004FB53E /* Preview Assets.xcassets */; };
 		117036732BCF2963004FB53E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117036722BCF2963004FB53E /* AddView.swift */; };
 		117036752BCF30AF004FB53E /* View+ExpensesStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117036742BCF30AF004FB53E /* View+ExpensesStyle.swift */; };
+		117036772BCF36D9004FB53E /* ExpenseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117036762BCF36D9004FB53E /* ExpenseSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1170366B2BCF1F27004FB53E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		117036722BCF2963004FB53E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		117036742BCF30AF004FB53E /* View+ExpensesStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ExpensesStyle.swift"; sourceTree = "<group>"; };
+		117036762BCF36D9004FB53E /* ExpenseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				117036642BCF1F26004FB53E /* Expenses3App.swift */,
 				117036662BCF1F26004FB53E /* ContentView.swift */,
+				117036762BCF36D9004FB53E /* ExpenseSection.swift */,
 				117036742BCF30AF004FB53E /* View+ExpensesStyle.swift */,
 				117036722BCF2963004FB53E /* AddView.swift */,
 				117036682BCF1F27004FB53E /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				117036672BCF1F26004FB53E /* ContentView.swift in Sources */,
+				117036772BCF36D9004FB53E /* ExpenseSection.swift in Sources */,
 				117036752BCF30AF004FB53E /* View+ExpensesStyle.swift in Sources */,
 				117036652BCF1F26004FB53E /* Expenses3App.swift in Sources */,
 				117036732BCF2963004FB53E /* AddView.swift in Sources */,
