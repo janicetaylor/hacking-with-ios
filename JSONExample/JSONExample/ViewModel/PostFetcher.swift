@@ -17,20 +17,26 @@ class PostFetcher: ObservableObject {
     func fetchPosts() async throws {
         let endpoint = "https://jsonplaceholder.typicode.com/photos"
         guard let url = URL(string: endpoint) else {
-            fatalError("invalid url")
+            throw PostFetcherError.invalidUrl
         }
                 
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            fatalError("invalid response")
+            throw PostFetcherError.invalidResponse
         }
         
         do {
             let decoder = JSONDecoder()
             posts = try decoder.decode([Post].self, from: data)
         } catch {
-            fatalError("can't decode json")
+            throw PostFetcherError.invalidJSONDecode
+        }
+        
+        enum PostFetcherError: Error {
+            case invalidUrl
+            case invalidResponse
+            case invalidJSONDecode
         }
         
     }
