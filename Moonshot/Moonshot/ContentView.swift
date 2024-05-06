@@ -7,23 +7,30 @@
 
 import SwiftUI
 
+struct User: Codable {
+    let name: String
+    let address: Address
+}
+
+struct Address: Codable {
+    let street: String
+    let city: String
+}
+
 struct ContentView: View {
     
     let layout = [
-        GridItem(.adaptive(minimum: 80)),
-        GridItem(.adaptive(minimum: 80)),
-        GridItem(.adaptive(minimum: 80))
+        GridItem(.adaptive(minimum: 20, maximum: 80)),
+        GridItem(.adaptive(minimum: 20, maximum: 80)),
+        GridItem(.adaptive(minimum: 20, maximum: 80))
     ]
     
     var body: some View {
-        VStack {
-            ScrollView(.horizontal) {
-                LazyHGrid(rows: layout, content: {
-                    ForEach(0..<1000) {
-                        Text("row \($0)")
-                            .font(.title)
-                    }
-                })
+        ScrollView {
+            LazyVGrid(columns: layout) {
+                ForEach(0..<1000) {
+                    Text("item \($0)")
+                }
             }
         }
     }
