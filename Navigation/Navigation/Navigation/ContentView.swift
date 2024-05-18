@@ -11,26 +11,25 @@ struct DetailView: View {
     var number: Int
     
     var body: some View {
-        NavigationLink("go to random number", value: Int.random(in: 1...1000))
-            .navigationTitle("number: \(number)")
+        Text("detail view: \(number)")
     }
     
     init(number: Int) {
         self.number = number
-        print("creating detail view \(number)")
+        print("creating detail view: \(number)")
     }
 }
 
 struct ContentView: View {
     
-    @State private var path = [Int]()
-    
     var body: some View {
-        NavigationStack(path: $path) {
-           DetailView(number: 0)
-                .navigationDestination(for: Int.self) { i in
-                    DetailView(number: i)
-                }
+        NavigationStack {
+            List(0..<100) { i in
+                NavigationLink("select \(i)", value: i)
+            }
+            .navigationDestination(for: Int.self) { selection in
+                    Text("selected: \(selection)")
+            }
         }
     }
 }
