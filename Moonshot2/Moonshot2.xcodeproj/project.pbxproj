@@ -20,6 +20,9 @@
 		117D24AE2C14CFD700735F22 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D24AD2C14CFD700735F22 /* MissionView.swift */; };
 		117D24B02C14DA9400735F22 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D24AF2C14DA9400735F22 /* AstronautView.swift */; };
 		117D24B22C14DC1B00735F22 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D24B12C14DC1B00735F22 /* DividerView.swift */; };
+		117D24B42C150A1100735F22 /* CrewRosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D24B32C150A1100735F22 /* CrewRosterView.swift */; };
+		117D24B62C150D0C00735F22 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D24B52C150D0C00735F22 /* GridLayout.swift */; };
+		117D24B82C150DC300735F22 /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D24B72C150DC300735F22 /* ListLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		117D24AD2C14CFD700735F22 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		117D24AF2C14DA9400735F22 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 		117D24B12C14DC1B00735F22 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		117D24B32C150A1100735F22 /* CrewRosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewRosterView.swift; sourceTree = "<group>"; };
+		117D24B52C150D0C00735F22 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		117D24B72C150DC300735F22 /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +79,13 @@
 				117D24A52C14C3A700735F22 /* Astronaut.swift */,
 				117D24A92C14C56E00735F22 /* Mission.swift */,
 				117D24AD2C14CFD700735F22 /* MissionView.swift */,
+				117D24B32C150A1100735F22 /* CrewRosterView.swift */,
 				117D24B12C14DC1B00735F22 /* DividerView.swift */,
 				117D24AF2C14DA9400735F22 /* AstronautView.swift */,
 				117D24A72C14C40400735F22 /* Bundle-Decodable.swift */,
 				117D24952C14C30700735F22 /* ContentView.swift */,
+				117D24B52C150D0C00735F22 /* GridLayout.swift */,
+				117D24B72C150DC300735F22 /* ListLayout.swift */,
 				117D24AB2C14CD0A00735F22 /* Color-Theme.swift */,
 				117D24A12C14C39200735F22 /* astronauts.json */,
 				117D24A22C14C39200735F22 /* missions.json */,
@@ -168,13 +177,16 @@
 			files = (
 				117D24AE2C14CFD700735F22 /* MissionView.swift in Sources */,
 				117D24B22C14DC1B00735F22 /* DividerView.swift in Sources */,
+				117D24B42C150A1100735F22 /* CrewRosterView.swift in Sources */,
 				117D24A62C14C3A700735F22 /* Astronaut.swift in Sources */,
 				117D24B02C14DA9400735F22 /* AstronautView.swift in Sources */,
 				117D24AC2C14CD0A00735F22 /* Color-Theme.swift in Sources */,
 				117D24962C14C30700735F22 /* ContentView.swift in Sources */,
 				117D24942C14C30700735F22 /* Moonshot2App.swift in Sources */,
 				117D24AA2C14C56E00735F22 /* Mission.swift in Sources */,
+				117D24B82C150DC300735F22 /* ListLayout.swift in Sources */,
 				117D24A82C14C40400735F22 /* Bundle-Decodable.swift in Sources */,
+				117D24B62C150D0C00735F22 /* GridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
