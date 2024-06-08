@@ -47,11 +47,16 @@ struct MissionView: View {
                         .foregroundColor(.lightBackground)
                         .padding(.vertical)
                     
+                    Text(mission.formattedLaunchDate)
+                        .font(.title.bold())
+                        .padding(.bottom, 5)
+                    
                     Text("Mission highlights")
                         .font(.title.bold())
                         .padding(.bottom, 5)
                     
                     Text(mission.description)
+                    
                     
                     Rectangle()
                         .frame(height: 2)
