@@ -42,10 +42,7 @@ struct MissionView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    Rectangle()
-                        .frame(height: 2)
-                        .foregroundColor(.lightBackground)
-                        .padding(.vertical)
+                    DividerView()
                     
                     Text(mission.formattedLaunchDate)
                         .font(.title.bold())
@@ -57,11 +54,7 @@ struct MissionView: View {
                     
                     Text(mission.description)
                     
-                    
-                    Rectangle()
-                        .frame(height: 2)
-                        .foregroundColor(.lightBackground)
-                        .padding(.vertical)
+                    DividerView()
                     
                     Text("Crew")
                         .font(.title.bold())
