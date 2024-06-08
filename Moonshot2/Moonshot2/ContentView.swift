@@ -30,7 +30,7 @@ struct ContentView: View {
                                 VStack {
                                     Text(mission.displayName)
                                         .font(.headline)
-                                    Text(mission.launchDate ?? "n/a")
+                                    Text(mission.formattedLaunchDate)
                                         .font(.caption)
                                 }
                                 .frame(maxWidth: .infinity)
