@@ -14,6 +14,9 @@ struct CheckoutView: View {
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
     
+    @State private var errorMessage = ""
+    @State private var showingError = false
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -38,6 +41,11 @@ struct CheckoutView: View {
             Button("ok") { }
         } message: {
             Text("confirmation message")
+        }
+        .alert("Oops!", isPresented: $showingError) {
+            Button("ok") { }
+        } message: {
+            Text(errorMessage)
         }
     }
     
@@ -68,6 +76,8 @@ struct CheckoutView: View {
             showingConfirmation = true
         } catch {
             print("checkout failed")
+            errorMessage = "Sorry, checkout failed: \(error.localizedDescription)"
+            showingError = true 
         }
         
         

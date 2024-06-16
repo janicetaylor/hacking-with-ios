@@ -14,6 +14,7 @@
 		117D25502C1CFC2F00735F22 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D254F2C1CFC2F00735F22 /* Order.swift */; };
 		117D25522C1D044200735F22 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D25512C1D044200735F22 /* AddressView.swift */; };
 		117D25542C1D04F700735F22 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D25532C1D04F700735F22 /* CheckoutView.swift */; };
+		117D25562C1F830000735F22 /* String-EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D25552C1F830000735F22 /* String-EmptyChecking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		117D254F2C1CFC2F00735F22 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		117D25512C1D044200735F22 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		117D25532C1D04F700735F22 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		117D25552C1F830000735F22 /* String-EmptyChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-EmptyChecking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		117D25402C1CF40F00735F22 /* CupcakeCorner */ = {
 			isa = PBXGroup;
 			children = (
+				117D25552C1F830000735F22 /* String-EmptyChecking.swift */,
 				117D25412C1CF40F00735F22 /* CupcakeCornerApp.swift */,
 				117D25432C1CF40F00735F22 /* ContentView.swift */,
 				117D254F2C1CFC2F00735F22 /* Order.swift */,
@@ -150,6 +153,7 @@
 				117D25522C1D044200735F22 /* AddressView.swift in Sources */,
 				117D25542C1D04F700735F22 /* CheckoutView.swift in Sources */,
 				117D25442C1CF40F00735F22 /* ContentView.swift in Sources */,
+				117D25562C1F830000735F22 /* String-EmptyChecking.swift in Sources */,
 				117D25422C1CF40F00735F22 /* CupcakeCornerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,7 +28,12 @@ class Order: ObservableObject, Codable {
         try container.encode(zip, forKey: .zip)
     }
     
-    init() { } 
+    init() {
+        name = UserDefaults.standard.string(forKey: "name") ?? ""
+        streetAddress = UserDefaults.standard.string(forKey: "streetAddress") ?? ""
+        city = UserDefaults.standard.string(forKey: "city") ?? ""
+        zip = UserDefaults.standard.string(forKey: "zip") ?? "" 
+    }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -60,13 +65,13 @@ class Order: ObservableObject, Codable {
     @Published var extraFrosting = false
     @Published var addSprinkles = false
     
-    @Published var name = ""
-    @Published var streetAddress = ""
-    @Published var city = ""
-    @Published var zip = ""
+//    @Published var name = ""
+//    @Published var streetAddress = ""
+//    @Published var city = ""
+//    @Published var zip = ""
     
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.isReallyEmpty || streetAddress.isReallyEmpty || city.isReallyEmpty || zip.isReallyEmpty {
             return false
         }
         return true
@@ -91,4 +96,29 @@ class Order: ObservableObject, Codable {
         
         return cost 
     }
+    
+    var name: String {
+        didSet {
+            UserDefaults.standard.set(name, forKey: "name")
+        }
+    }
+    
+    var streetAddress: String {
+        didSet {
+            UserDefaults.standard.set(streetAddress, forKey: "streetAddress")
+        }
+    }
+    
+    var city: String {
+        didSet {
+            UserDefaults.standard.set(city, forKey: "city")
+        }
+    }
+    
+    var zip: String {
+        didSet {
+            UserDefaults.standard.set(zip, forKey: "zip")
+        }
+    }
+    
 }
