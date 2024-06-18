@@ -10,7 +10,18 @@ import CoreData
 
 struct DetailView: View {
     
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
+    @State private var showingDeleteAlert = false
+    
     let book: Book
+    
+    func deleteBook() {
+        moc.delete(book)
+        // uncomment this line if you want to make the deletion permanent
+          // try? moc.save()
+        dismiss()
+    }
     
     var body: some View {
         ScrollView {
@@ -39,8 +50,21 @@ struct DetailView: View {
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
         }
+        .toolbar {
+            Button {
+                showingDeleteAlert = true
+            } label: {
+                Label("delete this book", systemImage: "trash")
+            }
+        }
         .navigationTitle(book.title ?? "unknown book")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Delete book", isPresented: $showingDeleteAlert) {
+            Button("Delete", role: .destructive, action: deleteBook)
+            Button("Cancel", role: .cancel) { }
+        } message: {
+            Text("are you sure?")
+        }
     }
 }
 
