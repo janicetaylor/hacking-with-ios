@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct AddressView: View {
+    
+    @Bindable var order: Order
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section {
+                TextField("name", text: $order.name)
+                TextField("street address", text: $order.streetAddress)
+                TextField("city", text: $order.city)
+                TextField("zip", text: $order.zip)
+            }
+            
+            Section {
+                NavigationLink("check out") {
+                    CheckoutView(order: order)
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    AddressView()
+    AddressView(order: Order())
 }
