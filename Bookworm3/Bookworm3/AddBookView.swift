@@ -5,6 +5,7 @@
 //  Created by Janice on 6/20/24.
 //
 
+import Foundation
 import SwiftUI
 
 struct AddBookView: View {
@@ -60,3 +61,4 @@ struct AddBookView: View {
 #Preview {
     AddBookView()
 }
+

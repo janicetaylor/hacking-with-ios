@@ -2,9 +2,10 @@
 //  Bookworm3App.swift
 //  Bookworm3
 //
-//  Created by Janice on 6/19/24.
+//  Created by Janice on 6/20/24.
 //
 
+import Foundation
 import SwiftData
 import SwiftUI
 
