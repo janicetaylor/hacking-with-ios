@@ -17,18 +17,37 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            Text("Count: \(books.count)")
-                .navigationTitle("Bookworm")
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button("add book", systemImage: "plus") {
-                            showingAddScreen.toggle()
+            List {
+                ForEach(books) { book in
+                    NavigationLink(value: book) {
+                        HStack {
+                            EmojiRatingView(rating: book.rating)
+                                .font(.largeTitle)
+                            
+                            VStack {
+                                Text(book.title)
+                                    .font(.title2)
+                                Text(book.author)
+                                    .font(.title3)
+                            }
                         }
                     }
                 }
-                .sheet(isPresented: $showingAddScreen) {
-                    AddBookView()
+            }
+            .navigationDestination(for: Book.self) { book in
+                DetailView(book: book)
+            }
+            .navigationTitle("Bookworm")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("add book", systemImage: "plus") {
+                        showingAddScreen.toggle()
+                    }
                 }
+            }
+            .sheet(isPresented: $showingAddScreen) {
+                AddBookView()
+            }
         }
     }
 }

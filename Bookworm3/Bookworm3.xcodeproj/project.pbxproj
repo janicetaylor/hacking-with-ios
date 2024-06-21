@@ -13,6 +13,9 @@
 		117D26492C24F57100735F22 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D26482C24F57100735F22 /* Book.swift */; };
 		117D264B2C24F59E00735F22 /* Bookworm3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D264A2C24F59E00735F22 /* Bookworm3App.swift */; };
 		117D264D2C24F5EC00735F22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D264C2C24F5EC00735F22 /* ContentView.swift */; };
+		117D264F2C24F66E00735F22 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D264E2C24F66E00735F22 /* EmojiRatingView.swift */; };
+		117D26512C24F6A500735F22 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D26502C24F6A500735F22 /* RatingView.swift */; };
+		117D26532C25B40100735F22 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D26522C25B40100735F22 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		117D26482C24F57100735F22 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		117D264A2C24F59E00735F22 /* Bookworm3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookworm3App.swift; sourceTree = "<group>"; };
 		117D264C2C24F5EC00735F22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		117D264E2C24F66E00735F22 /* EmojiRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		117D26502C24F6A500735F22 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		117D26522C25B40100735F22 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,10 @@
 				117D264A2C24F59E00735F22 /* Bookworm3App.swift */,
 				117D264C2C24F5EC00735F22 /* ContentView.swift */,
 				117D26482C24F57100735F22 /* Book.swift */,
+				117D264E2C24F66E00735F22 /* EmojiRatingView.swift */,
+				117D26502C24F6A500735F22 /* RatingView.swift */,
 				117D26342C23515C00735F22 /* Assets.xcassets */,
+				117D26522C25B40100735F22 /* DetailView.swift */,
 				117D26362C23515C00735F22 /* Preview Content */,
 			);
 			path = Bookworm3;
@@ -143,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117D264F2C24F66E00735F22 /* EmojiRatingView.swift in Sources */,
 				117D26492C24F57100735F22 /* Book.swift in Sources */,
 				117D264B2C24F59E00735F22 /* Bookworm3App.swift in Sources */,
+				117D26532C25B40100735F22 /* DetailView.swift in Sources */,
+				117D26512C24F6A500735F22 /* RatingView.swift in Sources */,
 				117D264D2C24F5EC00735F22 /* ContentView.swift in Sources */,
 				117D26432C24C9B700735F22 /* AddBookView.swift in Sources */,
 			);
