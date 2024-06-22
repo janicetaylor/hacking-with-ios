@@ -13,6 +13,7 @@
 		117D26682C2713AF00735F22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117D26672C2713AF00735F22 /* Preview Assets.xcassets */; };
 		117D266F2C27151A00735F22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D266E2C27151A00735F22 /* User.swift */; };
 		117D26712C27159F00735F22 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D26702C27159F00735F22 /* EditUserView.swift */; };
+		117D26732C271D9800735F22 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D26722C271D9800735F22 /* UsersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		117D26672C2713AF00735F22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		117D266E2C27151A00735F22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		117D26702C27159F00735F22 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
+		117D26722C271D9800735F22 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				117D26602C2713AE00735F22 /* SwiftDataProject1App.swift */,
+				117D26722C271D9800735F22 /* UsersView.swift */,
 				117D26702C27159F00735F22 /* EditUserView.swift */,
 				117D26622C2713AE00735F22 /* ContentView.swift */,
 				117D266E2C27151A00735F22 /* User.swift */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117D26732C271D9800735F22 /* UsersView.swift in Sources */,
 				117D26632C2713AE00735F22 /* ContentView.swift in Sources */,
 				117D26712C27159F00735F22 /* EditUserView.swift in Sources */,
 				117D26612C2713AE00735F22 /* SwiftDataProject1App.swift in Sources */,
