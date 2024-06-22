@@ -11,7 +11,18 @@ import SwiftData
 struct ContentView: View {
     
     @Environment(\.modelContext) var modelContext
-    @Query(sort: \User.name) var users: [User]
+    @Query(filter: #Predicate<User> { user in
+        if user.name.localizedStandardContains("R") {
+              if user.city == "London" {
+                  return true
+              } else {
+                  return false
+              }
+          } else {
+              return false
+          }
+    }, sort: \User.name)
+    var users: [User]
     @State private var path = [User]()
     
     var body: some View {
@@ -26,10 +37,17 @@ struct ContentView: View {
                 EditUserView(user: user)
             }
             .toolbar {
-                Button("Add User", systemImage: "plus") {
-                    let user = User(name: "", city: "", joinDate: .now)
-                    modelContext.insert(user)
-                    path = [user]
+                Button("Add Samples", systemImage: "plus") {
+                    
+                    try? modelContext.delete(model: User.self)
+                    
+                    let first = User(name: "Ed Sheeran", city: "London", joinDate: .now)
+                    let second = User(name: "Miranda Lambert", city: "Houston", joinDate: .now)
+                    let third = User(name: "Blake Shelton", city: "Los Angeles", joinDate: .now)
+                    modelContext.insert(first)
+                    modelContext.insert(second)
+                    modelContext.insert(third)
+                    
                 }
             }
         }
